@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Nome do site</title>
+
+    <link href="../_DEFAULT/header.css" rel="stylesheet" type="text/css">
+    <link href="../_DEFAULT/style.css" rel="stylesheet" type="text/css">
+    <link href="_css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="canta-container-w" style="width: 1279px; max-width: 100%;">
+        <div class="kv-guide-novo-share">
+            <div class="img-container-share">
+                <img src="icone_compartilhamento.png" alt="share">
+            </div>
+            <div>
+                <p><strong>Compartilhar</strong></p>
+            </div>
+            <div>
+                <a href="#" class="facebook-btn">
+                    <img src="icone_Facebook.png" alt="facebook">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="twitter-btn">
+                   <img src="icone_Twitter.png" alt="twitter">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="linkedin-btn">
+                    <img src="icone_LinkedIn.png" alt="linkedin">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="whatsapp-btn">
+                    <img src="icone_Whatsapp.png" alt="whatsapp">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const facebookBtn = document.querySelector(".facebook-btn");
+    const twitterBtn = document.querySelector(".twitter-btn");
+    // const pinterestBtn = document.querySelector(".pinterest-btn");
+    const linkedinBtn = document.querySelector(".linkedin-btn");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+    function init() {
+        const pinterestImg = document.querySelector(".pinterest-img");
+
+        let postUrl = encodeURI(document.location.href);
+        let postTitle = encodeURI("Hi everyone, please check this out: ");
+        let postImg = encodeURI('ok');
+
+        facebookBtn.setAttribute(
+            "href",
+            `https://www.facebook.com/sharer.php?u=${postUrl}`
+        );
+
+        twitterBtn.setAttribute(
+            "href",
+            `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+        );
+
+        // pinterestBtn.setAttribute(
+        //     "href",
+        //     `https://pinterest.com/pin/create/bookmarklet/?media=${postImg}&url=${postUrl}&description=${postTitle}`
+        // );
+
+        linkedinBtn.setAttribute(
+            "href",
+            `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+        );
+
+        whatsappBtn.setAttribute(
+            "href",
+            `https://wa.me/?text=${postTitle} ${postUrl}`
+        );
+    }
+
+
+
+
+
+
+
+    init();
+
+
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+@mixin fonts($size, $color, $weight, $line, $letter, $text, $textShadowns) {
+    font-family: "Nunito", "nunitolight", "nunito-light", "arial";
+    font-weight: #{$weight};
+    line-height: #{$line};
+    font-size: em($size);
+    color: #{$color};
+    letter-spacing: #{$letter};
+    text-align: #{$text};
+    text-shadow: #{$textShadowns};
+}
+
+@mixin colors() {
+    //cores nos módulos
+    $listButtonsName: "roxo-clube", "laranja-smiles", "vinho-transacoes", "magenta", "verde-Localiza", "amarelo-hertz",
+        "amarelo-shopping", "azul-cartoes", "preto-uber", "cinza-medio";
+    $listColors: "#663399", "#FF5A00", "#A11F62", "#EC008C", "#008D2D", "#FFC845", "#FFF200", "#899eae", "#000000",
+        "#7c7c7c";
+
+    $max: length($listButtonsName);
+
+    @for $i from 1 through $max {
+        &.#{nth($listButtonsName, $i)} {
+            $cor: #{nth($listColors, $i)};
+            &.modulo {
+
+                .titulo{
+                    color: $cor;
+                }
+
+                .canta-btn {
+                    border-color: $cor;
+                    background-color: $cor;
+                }
+            }
+        }
+    }
+}
+
+// @include fonts(30, '#c7c7c7', 900, 1.1, 1, 'center','1px 1px 2px rgba(000,000,000,0.8)');
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////PD
+
+.kv-guide-novo-share{
+display: flex;
+flex-direction: row;
+align-items: center;
+font-family: "Nunito", "nunitolight", "nunito-light", "arial";
+color: #7c7c7c;
+div{
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 30px;
+        max-width: initial;
+    }
+}
+}
