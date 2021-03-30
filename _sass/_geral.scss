@@ -46,11 +46,14 @@ flex-direction: row;
 align-items: center;
 font-family: "Nunito", "nunitolight", "nunito-light", "arial";
 color: #7c7c7c;
+float: right;
 div{
     margin: 0 5px;
     display: flex;
     justify-content: center;
-
+    p{
+        margin: auto !important;
+    }
     img{
         width: 30px;
         max-width: initial;
